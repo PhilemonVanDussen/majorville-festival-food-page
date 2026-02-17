@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <style>
+
+
+
+    
+      
+
+        body{
+            background-image: url("bg.jpg");
+        }
+
+        main h1{
+            margin: 0 8% 0 3% ;
+            font-weight: bold;
+            font-size: 300%;
+        }
+        main p{
+            margin: 0px 0px 0px 3%;
+            font-size: 150%;
+        }
+
+        .text {
+            margin: 20px 0px 0px 23px;
+            
+        }
+        .ps{
+            padding-left: 2%;
+            font-size:x-small
+        }
+
+        footer p{
+            font-size: small;
+        }
+        header{
+            text-align: center;
+            font-size: 100px;
+            font-family: Archivo Black;
+            color: burlywood;
+        }
+        .container {
+            margin:auto;
+            max-width: 95%;
+            display: grid;
+            grid-template-columns: 3fr;
+            grid-template-rows: 0.5fr 0.25fr 1.5fr 0.25fr;
+            grid-template-areas:
+                "header"
+                "nav"
+                /* "aside"  */
+                "main"
+                "image"
+                "footer";
+            
+        }
+
+        header { background-color: #7a130b; }
+        nav { background-color: #af352c; font-size: 2rem;}
+        main { background-color: bisque; }
+        .image {background-color: bisque;}
+        /* aside { background-color: #619961; } */
+        footer { background-color: #a56464; }
+        
+        nav ul{
+            font-size: 50%;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul li{
+            cursor: pointer;
+            flex:content;
+            font-size: 250%;
+        }
+        header{
+			grid-area:header;
+		}
+
+		nav{
+			grid-area:nav;
+		}
+
+		main{
+			grid-area:main;
+            border: #9b3b3b solid 5px;
+		}
+
+        .image{
+			grid-area:image;
+            background-image: url(lemonade.avif);
+            border: #9b3b3b solid 5px;
+		}
+
+       
+
+		/* aside{
+			grid-area:aside;
+		} */
+
+
+		footer{
+			grid-area:footer;
+		}
+
+        .img-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+            margin-top: 30px;
+        }
+
+        .img-gallery img {
+            height: 160px;
+            width: 160px;
+            border: #9b3b3b solid 5px;
+        }
+
+        .content {
+            margin: 20px 0px 0px 0px;
+            
+        }
+
+        @media screen and (min-width: 550px) {
+            .container {
+                height: 100vh;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                "main main image" 
+                "footer footer footer"
+            }
+            nav ul{
+                text-align: center;
+                flex-direction: row;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Foods and Drinks</header>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Food & Drinks</a></li>
+        </ul>
+    </nav>
+        <main>
+            <div class="content">
+                <p>Feeling hungry? Thirsty? Had too much fun now you need to relax? No worries, as much as there is a lot to do in the festival, there's plenty to eat and drink! 
+            The festival will have multiple vendors serving drinks, lemonade, slushies, ice cream, and more. There will also be food trucks at the festival as well, such as;
+                </p>
+            <div class="img-gallery">
+                <figure>
+                    <img src="ribs.avif" alt="ribs on grill" class="ribs_img">
+                    <figcaption>Pigs Eatin' Ribs</figcaption>
+                </figure>
+                <figure>
+                    <img src="pizza.avif" alt="fresh pizza on counter" class="pizza_img">
+                    <figcaption>TC Pizza Company</figcaption>
+                </figure>
+                <figure>
+                    <img src="korean-cuisine.avif" class="korean_img">
+                    <figcaption>Heart N Seoul</figcaption>
+                </figure>
+                <p class="text">Don't miss out!</p>
+            </div>
+            
+        
+        </main>
+        <footer><p>Made by Leo Mulholland, PJ VanDussen, Kohen Liverance, and helped written by Scottland Rios Cairns.</p><p class="ps"> also thanks to W3Schools for the image slideshow</p></footer>
+        <div class="image">
+           <img src="lemonade.avif" alt="lemonade on table">
+        </div>
+        
+</body>
+</html>

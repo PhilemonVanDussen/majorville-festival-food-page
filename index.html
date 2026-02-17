@@ -12,65 +12,61 @@
             box-sizing: border-box;  
         }
 
-        /* navigation */
-        nav {
-            background-color: aqua;
-           
-            
+        body {
+            background-image: url(bg.jpg);
         }
-       
 
+
+        /* navigation */
+       
         .flex-container{
             display: flex;
             background: #fafafa;
             flex-wrap: wrap;
-            justify-content: flex-end;
+            width: 100%;
         }
 
         .box{
             height: 75px;
-            flex-basis: 150px;
-            text-align: center;
+            flex: 1;
             background-color: rgb(226, 96, 10);
             border: black solid 1px;
             border-top: 0px;
             border-bottom: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
         }
 
-        .icon {
-            flex: 1;
-            ;
-        }
-        .one {
-            ;
-            ;
-        }
-
-        .two{
-          -
-            
+      
+        
+        .box a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .three{
-            -
-            
-            
+        .box a:hover {
+            text-decoration: underline;
         }
-
-        .four {
-            ;
-        }
-
         
         /* header */
         header {
-            background-color: burlywood;
+            text-align: center;
+            color:burlywood;
+            font-size: 60px;
+            margin: auto;
+           
+            font-family: Archivo Black;
         }
 
         /* content */
         main {
       
-            background-color: blueviolet;
             display: grid;
             grid-template-columns: 2fr 1fr;
             grid-auto-rows: minmax(100px, auto);
@@ -100,17 +96,18 @@
 
         /* footer */
         footer {
-            background-color: pink;
+            
         }
     </style>
 </head>
 <body>
+
+    <header>
+        <h1>Food and Drinks</h1>
+    </header>
+
     <nav>
-        
             <div class="flex-container"> 
-                <div class="box icon">
-                    icon
-                </div>
                 <div class="box one">
                     <a href="#">Home</a>
                 </div>
@@ -127,9 +124,7 @@
        
     </nav>
     
-    <header>
-
-    </header>
+    
 
     <main >
        
