@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <style>
+
+        body{
+            background-image: url("bg.jpg");
+        }
+        
+        header{
+            background-color: #7a130b;
+            grid-area:header;
+            font-size: 15vw;
+            text-align: center;
+            font-family: Archivo Black;
+            color: burlywood;
+        }
+            
+        nav{ 
+            background-color: #af352c; 
+            font-size: 2rem;
+            grid-area:nav;
+            font-family:sans-serif;
+        }
+
+        main{
+            background-color: bisque;
+        }
+
+        /* .image{
+            background-color: bisque;
+            grid-area:image;
+        } */
+
+        .img1{
+            grid-area: img1;
+            background-color: bisque;
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            text-align: left;
+
+        }
+
+        .img2{
+            grid-area: img2;
+            background-color: bisque;
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            text-align: right;
+        }
+
+        .img3{
+            grid-area: img3;
+            background-color: bisque;
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            text-align: left;
+        }
+
+        img {
+            border: #9b3b3b solid 5px;
+            
+        }
+        .img1 img{
+            
+            object-fit:cover;
+            width: 200px;
+            height: 200px;
+        }
+
+        .img2 img{
+             object-fit:cover;
+            width: 200px;
+            height: 200px;
+        }
+
+        .img3 img{
+            object-fit:cover;
+            width: 200px;
+            height: 200px;
+        }
+
+        .lemonade{
+            grid-area: img1;
+            background-color: bisque;
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            text-align: left;
+        }
+
+          .lemonade img{
+            object-fit:cover;
+            width: 200px;
+            height: 200px;
+        }
+
+        hr{
+            border: none;
+            height: 4px;
+            background-color: #f3d3ad;
+        }
+
+        /* aside{
+            background-color: #619961;
+            grid-area:aside;
+            } */
+
+        footer{ 
+            background-color: #a56464;
+            grid-area:footer;
+        }
+
+        main h1{
+            margin: 0 8% 0 3% ;
+            font-weight: bold;
+            font-size: 300%;
+            font-family:Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        
+        main p{
+            margin: 0 8% 0 8% ;
+            font-size: 100%;
+            font-family: 'Trebuchet MS';
+        }
+
+        .ps{
+            padding-left: 2%;
+            font-size:x-small
+        }
+
+        footer p{
+            font-size: small;
+        }
+
+        
+        .container {
+            margin:auto;
+            max-width: 95%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5fr 0.25fr;
+            grid-template-areas:
+                "header"
+                "nav"
+                /* "main" */
+                "img1"
+                "img2"
+                "img3"
+                "footer"
+        }
+        
+        /* Nav */
+        nav ul{
+            font-size: 50%;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul li{
+            cursor: pointer;
+            flex:content;
+            font-size: 250%;
+        }
+		
+
+        @media screen and (min-width: 550px) {
+            .container {
+                height: 100vh;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 1fr);
+                grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                "img1 img1 img1"
+                "img2 img2 img2"
+                "img3 img3 img3"
+                "footer footer footer"
+            }
+            nav ul{
+                text-align: center;
+                flex-direction: row;
+            }
+
+            .img1{
+                grid-area: img1;
+                background-color: bisque;
+                /* display: grid;
+                grid-template-columns: 1fr 1fr ; */
+                text-align: left;
+            }
+
+            .img2{
+                grid-area: img2;
+                background-color: bisque;
+                display: grid;
+                grid-template-columns: 1fr 1fr ;
+                text-align: left;
+            }
+
+            .img3{
+                grid-area: img3;
+                background-color: bisque;
+                display: grid;
+                grid-template-columns: 1fr 1fr ;
+                text-align: left;
+            }
+
+            .img1 img{
+                
+                object-fit:cover;
+                width: 400px;
+                height: 400px;
+                margin: 0px 0px 0px 140px
+            }
+
+            .img2 img{
+                object-fit:cover;
+                width: 400px;
+                height: 400px;
+                margin: 0px 0px 0px 45px
+            }
+
+            .img3 img{
+                object-fit:cover;
+                width: 400px;
+                height: 400px;
+                margin: 0px 0px 0px 140px
+            }
+
+
+            .lemonade{
+                grid-area: img1;
+                background-color: bisque;
+                display: grid;
+                grid-template-columns: 1fr 1fr ;
+                text-align: left;
+                
+            }
+
+            .lemonade img{
+                object-fit:cover;
+                width: 400px;
+                height: 400px;
+                margin: 0px 0px 0px 140px
+            }
+                main h1{
+                margin: 0 8% 0 3% ;
+                font-weight: bold;
+                font-size: 300%;
+                font-family:Geneva, Tahoma, sans-serif;
+                text-align: center;
+            }
+        
+            main p{
+                margin: 0 8% 0 8% ;
+                font-size: 250%;
+                font-family: 'Trebuchet MS';
+            }
+
+            .price-tag {
+                margin: 0px 0px 0px 0px
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Food & Drinks</header>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="food.html">Food & Drinks</a></li>
+        </ul>
+    </nav>
+        <main>
+            <h1>Food Trucks!</h1>
+            <hr>
+            
+            <div class="img1">
+                
+                <img src="korean-cuisine.avif" alt="koreanfood">
+                <div>
+                    <p>This is the chill place to eat! Unique, savory, tasty, Hearts and Soeul has what you didn't expect to want!</p>
+                    <p class="price-tag">PRICE: $40 USD</p>
+                </div>
+                
+            </div>
+            
+            <hr>
+
+            <div class="img2">
+                <div>
+                    <p>Pizza lovers will adore this vendor! TC Pizza Company has delicate toppings with baked crust and pleasing sauce!</p>
+                    <p class="price-tag">PRICE: $400 USD</p>
+                </div>
+                <img src="pizza.avif" alt="pizza">
+            </div> 
+           
+            <hr>
+
+            <div class="img3">
+                <img src="ribs.avif" alt="ribs">
+                <div>
+                    <p>Delicous, smoky, and grilled its Pigs Eatin Ribs! Chew off and tast the tender meat to the bone!</p>
+                    <p class="price-tag">PRICE: $40,000,000 USD</p>
+                </div>
+            </div>
+            
+            <hr>
+            <h1>Drinks Menu!</h1>
+            <hr>
+            <div class="lemonade">
+                <img src="lemonade.avif" alt="ribs">
+                <div>
+                    <table>
+                        
+                        <thead>
+                            <tr>
+                                <th>Drinks</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>Fresh Lemonade</td>
+                                <td>$0.40</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Slushies</td>
+                                <td>$4.00</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>Juice (apple/orange/grape/strawberry)</td>
+                                <td>$40.00</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>Pepsi</td>
+                                <td>$400.00</td>
+                                
+                            </tr>
+                        </thead>
+
+
+
+
+                    </table>
+
+
+                </div>
+            </div>
+            <br>
+
+        </main>
+        <footer><p>Made by Leo Mulholland, PJ VanDussen, Kohen Liverance, and helped written by Scottland Rios Cairns.</p></footer>
+        
+</body>
+</html>
